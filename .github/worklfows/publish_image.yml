@@ -1,9 +1,6 @@
 name: Publish Latest Docker Image
 
-on:
-  push:
-    branches:
-      - publish_to_ghcr
+on: push
 
 jobs:
   multi-registries:
@@ -37,4 +34,4 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            ghcr.io/michaelmelody91/github-actions-playground:${{ steps.extract_branch.outputs.branch }}-latest
+            ghcr.io/michaelmelody91/github-actions-playground:latest
