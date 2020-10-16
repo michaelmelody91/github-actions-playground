@@ -1,4 +1,4 @@
-name: Publish Latest Docker Image
+name: Testing Get Branch
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - testing_get_branch_name
 
 jobs:
-  multi-registries:
+  extract-print-branch:
     runs-on: ubuntu-latest
     steps:
       - name: Extract branch name
@@ -18,4 +18,3 @@ jobs:
         shell: bash
         run: echo "${{ steps.extract_branch.outputs.branch }}"
         id: print_branch
-      - name: Build and push
