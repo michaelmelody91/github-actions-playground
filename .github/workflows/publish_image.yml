@@ -34,4 +34,4 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            ghcr.io/michaelmelody91/github-actions-playground:${{ steps.extract_branch.outputs.branch }}
+            ghcr.io/michaelmelody91/github-actions-playground:${{ steps.extract_branch.outputs.branch }}-latest
